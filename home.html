@@ -258,10 +258,10 @@
 
         </div>  
         <script>
-            let api = 'https://beverlyperez-imagequiz.herokuapp.com/quizzes';
+            let api = 'http://localhost:3002/quizzes/quizzes';
             fetch(api).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
 
-            let data = 'https://beverlyperez-imagequiz.herokuapp.com/score';
+            let data = 'http://localhost:3002/quizzes/score';
             fetch(api, {
                 method: 'POST',
                 headers: {
