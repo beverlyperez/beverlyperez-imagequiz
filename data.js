@@ -22,4 +22,6 @@ let quiz2 = {name: 'quiz 2', id: 2, picture: 'q2.png', questions: [q7, q8, q9, q
 let quiz3 = {name: 'quiz 3', id: 3, picture: 'q3.png', questions: [q13, q14, q15, q16, q17, q18]};
 let quizzes = [quiz1, quiz2, quiz3];
 
+let scores = [];
+module.exports.scores = scores;
 module.exports.quizzes = quizzes;
