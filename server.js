@@ -19,18 +19,25 @@ app.get('/quizzes', (request, response) => {
 
     response.json(metadata);
 });
-app.get('/quizzes/:id', (request, response) => {
-    response.send('Welcome to Image Quiz API quiz id');
+app.get('/quiz/:id', (request, response) => {
+    let id = request.params.id;
+    let found = data.quizzes.find(x => x.id === Number(id));
+    if (found) {
+        response.json(found.questions);
+    } else{
+        response.status(404).json({error:`Quiz with id ${id} does not exist`});
+    }
 });
+
 app.post('/score', (request, response) => {
     let username = request.body.username;
-    let quizid = request.body.quizid;
+    let id = request.body.id;
     let score = request.body.score;
-    data.scores.push({score: score, quizid: quizid, username: username});
+    data.scores.push({score: score, id: id, username: username});
     response.json({message: 'The score was added successfully.'});
 });
 
 
 app.listen(port, () => {
-    console.log('Image Quiz API listening on port ${port}!')
+    console.log(`Image Quiz API listening on port ${port}!`)
 })

@@ -258,10 +258,11 @@
 
         </div>  
         <script>
-            let api = 'http://localhost:3002/quizzes/quizzes';
+            let api = 'http://localhost:3002/quizzes';
             fetch(api).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
 
-            let data = 'http://localhost:3002/quizzes/score';
+            api = 'http://localhost:3002/score';
+            let data = {username: 'x', quizid: 1, score: 3};
             fetch(api, {
                 method: 'POST',
                 headers: {
