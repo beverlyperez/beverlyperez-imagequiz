@@ -1,0 +1,23 @@
+{
+  "name": "beverlyperez-imagequiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beverlyperez/beverlyperez-imagequiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beverlyperez/beverlyperez-imagequiz/issues"
+  },
+  "homepage": "https://github.com/beverlyperez/beverlyperez-imagequiz#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
