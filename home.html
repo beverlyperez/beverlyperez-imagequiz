@@ -260,6 +260,15 @@
         <script>
             let api = 'https://beverlyperez-imagequiz.herokuapp.com/quizzes';
             fetch(api).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
+
+            let data = 'https://beverlyperez-imagequiz.herokuapp.com/score';
+            fetch(api, {
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
         </script>
     </body>
 </html>

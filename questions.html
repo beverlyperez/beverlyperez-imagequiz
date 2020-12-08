@@ -233,7 +233,7 @@
         <p>Quizes to take:</p>  
         <table className="pics">
         <tr className="row1">
-        <td><img src="./images/VIDEOG.png" onClick= alt = "vg" height={150} width={300} /> Video Games </td>
+        <td><img src="./images/VIDEOG.png" onClick="" alt = "vg" height={150} width={300} /> Video Games </td>
         <td><img src="./" onClick={this.activateStateH} alt = "hw" height={150} width={300} /> Halloween </td>
         <td><img src="" onClick={this.activateStateC} alt = "cn" height={150} width={300}/> Cartoon Network Cartoons </td>                        
         </tr>
@@ -242,8 +242,14 @@
 
         </div>  
         <script>
-            let api = 'https://beverlyperez-imagequiz.herokuapp.com/quizzes';
-            fetch(api).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
+            let api = 'https://beverlyperez-imagequiz.herokuapp.com/score';
+            fetch(api, {
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(x => x.json()).then(y => console.log(y)).catch(e => console.log(e));
         </script>
     </body>
 </html>
